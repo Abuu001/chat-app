@@ -20,18 +20,17 @@ messageForm.addEventListener('submit',(e)=>{
         inputField.focus()
         
     })
-  
-    socket.on('inputData',(msg)=>{
-        console.log(msg);
-        const html=Mustache.render(messageTemplate,{
-            username : msg.username,
-            msg : msg.text ,
-            createdAt : moment(msg.createdAt).format('h:mm  a')
-        })
-        
-       output.insertAdjacentHTML('beforeend',html)
-    })
 
+})
+socket.on('inputData',(msg)=>{
+    console.log(msg);
+    const html=Mustache.render(messageTemplate,{
+        username : msg.username,
+        msg : msg.text ,
+        createdAt : moment(msg.createdAt).format('h:mm  a')
+    })
+    
+   output.insertAdjacentHTML('beforeend',html)
 })
 
 sendLocation.addEventListener('click',(e)=>{

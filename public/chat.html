@@ -38,11 +38,12 @@
     </script>
 
     <script  id="sidebar-template"  type="text/html">
+        <h3   class="list-title">Active Group</h3>
         <h2  class="room-title">{{room}}</h2>
-        <h2   class="list-title">user</h2>
+        <h3   class="list-title">Users Online </h3>
         <ul class="users">
             {{#users}}
-            <li>{{username}}</li>
+            <li>{{username}}  🟢</li>
             {{/users}}
         </ul>
     </script>
