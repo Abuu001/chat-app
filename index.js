@@ -71,7 +71,6 @@ io.on('connection',(socket)=>{
             users: getUsersInRoom(user.room)
            })
         }
-       // io.emit('inputData',generateMessage(`a user has left !!`))
     })
 
 })
